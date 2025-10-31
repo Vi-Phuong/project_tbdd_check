@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "DangNhap"
+rootProject.name = "AppVocabularyEnglish"
 include ':app'

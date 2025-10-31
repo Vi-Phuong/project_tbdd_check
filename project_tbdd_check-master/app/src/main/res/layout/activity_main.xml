@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Let the rhythm of your life be the music you choose"
-            android:textSize="6pt"
+            android:textSize="10sp"
             android:gravity="center"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="24dp"/>
