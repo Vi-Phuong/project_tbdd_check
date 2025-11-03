@@ -11,6 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DangNhap" >
+        <activity android:name="com.example.gheptu.GhepTuActivity" />
+
+
         <!-- Activity màn chính -->
         <activity
             android:name=".MainActivity"

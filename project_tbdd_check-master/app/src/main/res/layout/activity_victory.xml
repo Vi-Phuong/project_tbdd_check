@@ -8,10 +8,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#F8FAFF"
+        android:background="#FFFFFF"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="24dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -64,6 +64,10 @@
             android:backgroundTint="#90c9f7"
             android:text="Chơi lại"
             android:textSize="16sp" />
+
+
+        <include layout="@layout/thanh_menu"/>
+
 
     </LinearLayout>
 

@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.GridLayout;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.tuVung.MainActivity;
 import com.example.tuVung.R;
 import com.google.android.material.card.MaterialCardView;
 
@@ -29,15 +31,33 @@ public class GhepTuActivity extends AppCompatActivity {
     private String firstValue = "";
 
     private Handler handler = new Handler();
+    private ImageButton imbtnHome;
+    private ImageButton imbtnHoc;
+    private ImageButton imbtnCheckList;
+    private ImageButton imbtnGame;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.trang_gheptu);
-
         gridLayout = findViewById(R.id.gridLayout);
         tvTimer = findViewById(R.id.tvTimer);
+        imbtnHoc = findViewById(R.id.imbtnHoc);
+        imbtnCheckList = findViewById(R.id.imbtnCheckList);
+        imbtnGame = findViewById(R.id.imbtnGame);
+        imbtnHome = findViewById(R.id.imbtnHome);
+
+        imbtnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentGame = new Intent(GhepTuActivity.this, MainActivity.class);
+                startActivity(intentGame);
+            }
+
+
+        });
         setupDuLieu();
         setupKhung();
 

@@ -195,11 +195,11 @@
             android:gravity="center">
 
             <Button
+                android:id="@+id/btnNhiemVu"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="80dp"
                 android:layout_margin="10dp"
-
                 android:drawableLeft="@drawable/checklist"
                 android:text="Nhiệm vụ học tập"
                 android:backgroundTint="#8af2f2"
@@ -207,6 +207,7 @@
                 android:textColor="#000"/>
 
             <Button
+                android:id="@+id/btnGame"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="80dp"
@@ -235,6 +236,7 @@
             android:weightSum="4">
 
             <ImageButton
+                android:id="@+id/imbtnHome"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -242,6 +244,7 @@
                 android:src="@drawable/home" />
 
             <ImageButton
+                android:id="@+id/imbtnHoc"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -249,6 +252,7 @@
                 android:src="@drawable/book" />
 
             <ImageButton
+                android:id="@+id/imbtnCheckList"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -256,6 +260,7 @@
                 android:src="@drawable/checklist" />
 
             <ImageButton
+                android:id="@+id/imbtnGame"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
