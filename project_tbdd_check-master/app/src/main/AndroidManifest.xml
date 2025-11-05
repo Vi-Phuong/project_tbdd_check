@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DangNhap" >
         <activity android:name="com.example.gheptu.GhepTuActivity" />
+        <activity android:name="com.example.LuyenPA.LuyenPhatAmActivity" />
+
 
 
         <!-- Activity màn chính -->
