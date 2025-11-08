@@ -16,6 +16,8 @@
 
 
 
+
+
         <!-- Activity màn chính -->
         <activity
             android:name=".MainActivity"

@@ -22,6 +22,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
+
+
+// activ cua trang ghep tu
 public class GhepTuActivity extends AppCompatActivity {
     private TextView tvTimer;
     private GridLayout gridLayout;

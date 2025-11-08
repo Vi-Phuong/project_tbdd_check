@@ -14,8 +14,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.LuyenPA.LuyenPhatAmActivity;
+
 import com.example.gheptu.GhepTuActivity;
 
+
+//Cac trang se lien ket voi Mainactivity (trang chu) bang intent o day
 public class MainActivity extends AppCompatActivity {
     private Button btnGame;
     private ImageButton imbtnHome;
@@ -27,14 +30,18 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+        // Lien ket trang tro choi ghep tu
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             btnGame = findViewById(R.id.btnGame);
             imbtnGame = findViewById(R.id.imbtnGame);
+            imbtnHoc = findViewById(R.id.imbtnHoc);
             tvluyenphatam = findViewById(R.id.tvluyenphatam);
             View.OnClickListener gameClickListener = new View.OnClickListener() {
                 @Override
@@ -45,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
             };
         btnGame.setOnClickListener(gameClickListener);
         imbtnGame.setOnClickListener(gameClickListener);
+
+        // Lien ket trang Phat am
         tvluyenphatam.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -53,6 +62,18 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
+
+
+
+        // Lien ket trang chu de tu vung
+            // .....
+
+
+        // Liên ket trang nhiem vu hoc tap
+            // .......
+
+        // Lien ket trang tien do hoc tap
+            // .....
 
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

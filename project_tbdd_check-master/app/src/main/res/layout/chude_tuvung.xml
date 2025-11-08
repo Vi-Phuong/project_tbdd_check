@@ -77,6 +77,7 @@
                     android:text="Blast" />
 
                 <Button
+                    android:id="@+id/btnGhepThe"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/ghepthe"

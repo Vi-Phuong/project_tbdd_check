@@ -11,6 +11,8 @@
     app:strokeWidth="0dp"
     app:strokeColor="@android:color/transparent">
 
+    <!-- Trang ghep tu -->
+
     <TextView
         android:id="@+id/txtWord"
         android:layout_width="match_parent"

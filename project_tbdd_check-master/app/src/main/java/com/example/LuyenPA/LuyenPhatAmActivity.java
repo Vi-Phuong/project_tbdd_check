@@ -9,6 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.tuVung.MainActivity;
 import com.example.tuVung.R;
 
+
+// activ cua trang luyen phat am
+
 public class LuyenPhatAmActivity extends AppCompatActivity {
     private ImageView imvTroVe;
 

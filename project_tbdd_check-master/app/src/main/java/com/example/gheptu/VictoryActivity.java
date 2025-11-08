@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tuVung.R;
 
+
+// Activ cua trang ghep tu
+
 public class VictoryActivity  extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
