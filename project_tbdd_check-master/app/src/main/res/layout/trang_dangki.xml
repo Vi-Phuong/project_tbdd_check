@@ -1,0 +1,87 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:gravity="center_horizontal"
+android:background="#F3F6FA"
+android:padding="24dp"
+tools:context=".MainActivity">
+
+<!-- ELSA Logo -->
+<ImageView
+    android:id="@+id/logo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32dp"
+    android:layout_marginBottom="24dp"
+    android:contentDescription="ELSA Logo"
+    app:srcCompat="@drawable/anhdangnhap" />
+<!-- Thay thế @drawable/ic_elsa_logo bằng file logo của bạn -->
+
+<!-- Tiêu đề -->
+<TextView
+    android:id="@+id/title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Đăng ký để lưu lại tiến trình học"
+    android:textColor="@android:color/black"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:layout_marginBottom="24dp" />
+
+<!-- Ô nhập Email -->
+<EditText
+    android:id="@+id/email"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginBottom="16dp"
+    android:drawableStart="@android:drawable/sym_action_email"
+    android:drawablePadding="12dp"
+    android:hint="Địa chỉ email"
+    android:inputType="textEmailAddress"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp" />
+<!-- Thay thế @drawable/ic_email bằng icon email của bạn -->
+
+<!-- Ô nhập Mật khẩu -->
+<EditText
+    android:id="@+id/password"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginBottom="24dp"
+    android:drawableStart="@android:drawable/ic_lock_idle_lock"
+    android:drawablePadding="12dp"
+    android:hint="Mật khẩu"
+    android:inputType="textPassword"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp" />
+<!-- Thay thế @drawable/ic_lock bằng icon khóa của bạn -->
+
+<!-- Nút Đăng ký -->
+<Button
+    android:id="@+id/register_button"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/mauaodieu"
+    android:text="Đăng ký"
+    android:textAllCaps="true"
+    android:textColor="@color/black"
+    android:textSize="18sp" />
+
+<!-- Điều khoản và chính sách -->
+<TextView
+    android:id="@+id/terms_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Qua việc sử dụng ELSA, bạn đồng ý với Điều khoản sử dụng và Chính sách quyền riêng tư của ELSA."
+    android:textColor="@android:color/darker_gray"
+    android:textSize="12sp"
+    android:gravity="center"
+    android:lineSpacingExtra="4dp"/>
+
+</LinearLayout>
