@@ -10,7 +10,9 @@
     <!-- Nội dung có thể cuộn (Toàn bộ ScrollView cũ của bạn) -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@id/thanh_menu"
+        android:layout_marginBottom="70dp">
 
 
     <LinearLayout
@@ -329,11 +331,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="24dp"
+        android:layout_margin="90dp"
         android:src="@drawable/themnhiemvu"
         app:backgroundTint="#FF9800"
         app:tint="@android:color/white"
-        android:contentDescription="Thêm nhiệm vụ mới" />
+        android:contentDescription="Thêm nhiệm vụ mới"/>
     <!-- Nhớ thêm icon ic_add vào drawable -->
+    <include
+        android:id="@+id/thanh_menu"
+        layout="@layout/thanh_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
