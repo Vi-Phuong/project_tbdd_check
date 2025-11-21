@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,21 +7,24 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:fitsSystemWindows="true"
+    tools:context="com.example.gheptu.VictoryActivity">
+
     <!-- Trang ghep tu -->
 
+
+
     <!-- Nội dung chính -->
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="#F8FAFF"
         android:orientation="vertical"
-        android:padding="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+
+        >
+
+
 
         <TextView
             android:id="@+id/tvTitle"
@@ -35,13 +39,20 @@
             android:textStyle="bold" />
 
 
+
+
+
         <!-- Thanh điểm + thời gian -->
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
+            android:layout_height="50dp"
+
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            >
+
+
 
             <ImageView
                 android:layout_width="24dp"
@@ -49,6 +60,8 @@
                 android:layout_marginRight="10dp"
                 android:contentDescription="dong ho"
                 android:src="@drawable/clock" />
+
+
 
             <TextView
                 android:id="@+id/tvTimer"
@@ -60,22 +73,57 @@
                 android:textSize="16sp" />
 
 
+            <ImageButton
+                android:id="@+id/imbtnQuanLiTu"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Quản lý từ vựng"
+                android:src="@drawable/quan_li" />
+
+
         </LinearLayout>
 
+
+
         <!-- Lưới thẻ -->
+
         <GridLayout
             android:id="@+id/gridLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="420dp"
             android:layout_gravity="center"
             android:layout_marginBottom="16dp"
             android:alignmentMode="alignMargins"
             android:columnCount="3"
             android:rowCount="4"
+            android:padding="20dp"
             android:useDefaultMargins="true" />
+        <Button
+            android:id="@+id/btnHoanThanh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#EDBFBF"
+            android:text="Hoàn thành"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            />
 
 
-        <include layout="@layout/thanh_menu" />
+
+
+       <include layout="@layout/thanh_menu"/>
+
+
+
 
     </LinearLayout>
+
+
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

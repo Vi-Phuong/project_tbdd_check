@@ -3,20 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context="com.example.gheptu.VictoryActivity">
 
-    <!-- trang ghep tu -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
+        android:layout_height="match_parent"
+        android:background="#FFF9F1"
         android:gravity="center"
         android:orientation="vertical"
-
+        android:padding="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Thanh điểm + thời gian -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,7 +47,6 @@
         </LinearLayout>
 
 
-
         <TextView
             android:id="@+id/tvghiNhan"
             android:layout_width="wrap_content"
@@ -59,16 +58,12 @@
             android:textSize="16sp" />
 
         <Button
-            android:id="@+id/btnPlayAgain"
+            android:id="@+id/btnChoiLai"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#90c9f7"
+            android:backgroundTint="#EDBFBF"
             android:text="Chơi lại"
             android:textSize="16sp" />
-
-
-        <include layout="@layout/thanh_menu"/>
-
 
     </LinearLayout>
 

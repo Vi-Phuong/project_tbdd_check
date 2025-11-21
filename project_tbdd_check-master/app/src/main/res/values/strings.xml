@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DangNhap</string>
+    <string name="db_name">tuvungGT_v2.sql</string>
 </resources>
