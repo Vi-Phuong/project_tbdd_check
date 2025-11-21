@@ -7,19 +7,13 @@
     android:background="@drawable/mauvangnhat_dangki"
     tools:context=".MainActivity">
 
-    <!-- Nội dung có thể cuộn (Toàn bộ ScrollView cũ của bạn) -->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/thanh_menu"
-        android:layout_marginBottom="70dp">
-
-
+    <!-- Sử dụng LinearLayout bao ngoài để chứa phần header và listview -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:layout_marginBottom="70dp"> <!-- Chừa chỗ cho menu bottom -->
 
         <!-- TIÊU ĐỀ CHÍNH -->
         <LinearLayout
@@ -36,7 +30,6 @@
                 android:layout_height="24dp"
                 android:layout_marginEnd="8dp"
                 android:src="@drawable/checklist" />
-            <!-- Thay @drawable/ic_list bằng icon danh sách của bạn -->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -57,275 +50,18 @@
             android:textColor="#D35400"
             android:textSize="14sp" />
 
-        <!-- MỤC NHIỆM VỤ 1 (Đã hoàn thành) -->
-        <androidx.cardview.widget.CardView
+        <!-- LISTVIEW HIỂN THỊ NHIỆM VỤ -->
+        <ListView
+            android:id="@+id/lv_nhiemvu"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="2dp">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true" />
-                <!-- Bạn có thể tùy chỉnh drawable cho CheckBox để giống hệt ảnh -->
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="8dp"
-                    android:src="@drawable/loa" />
-                <!-- Thay @drawable/ic_headphone bằng icon của bạn -->
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Học 10 từ về Food 🍎"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="📝 Từ 'grape' hay quên"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-                <ImageButton
-                    android:id="@+id/btn_edit_task1"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="Sửa nhiệm vụ"
-                    android:src="@drawable/nut_sua" />
-                <!-- Thay @drawable/ic_edit bằng icon bút chì -->
-
-                <ImageButton
-                    android:id="@+id/btn_delete_task1"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="Xóa nhiệm vụ"
-                    android:src="@drawable/delete" />
-                <!-- Thay @drawable/ic_delete bằng icon thùng rác -->
-
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- MỤC NHIỆM VỤ 2 (Chưa hoàn thành) -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="2dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="false" />
-
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="8dp"
-                    android:src="@drawable/goal" />
-                <!-- Thay @drawable/ic_target bằng icon của bạn -->
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Học 5 từ về Animals 🐶"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
-
-                </LinearLayout>
-
-                <ImageButton
-                    android:id="@+id/btn_edit_task2"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="Sửa nhiệm vụ"
-                    android:src="@drawable/nut_sua" />
-
-                <ImageButton
-                    android:id="@+id/btn_delete_task2"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="Xóa nhiệm vụ"
-                    android:src="@drawable/delete" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-
-        <!-- MỤC NHIỆM VỤ 3 (Đã hoàn thành) -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="2dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="true" />
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="8dp"
-                    android:src="@drawable/idea" />
-                <!-- Icon bóng đèn cho nhiệm vụ ôn tập -->
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Ôn lại 8 từ cũ 💡"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="📝 Chủ đề Colors"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-                <ImageButton
-                    android:id="@+id/btn_edit_task3"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="Sửa nhiệm vụ"
-                    android:src="@drawable/nut_sua" />
-
-                <ImageButton
-                    android:id="@+id/btn_delete_task3"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="Xóa nhiệm vụ"
-                    android:src="@drawable/delete" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- MỤC NHIỆM VỤ 4 (Chưa hoàn thành) -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="2dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:checked="false" />
-
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="8dp"
-                    android:src="@drawable/book" />
-                <!-- Icon quyển sách cho nhiệm vụ luyện phát âm -->
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Luyện phát âm 3 từ mới 🎤"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="📝 apple, banana, orange"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-                <ImageButton
-                    android:id="@+id/btn_edit_task4"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="Sửa nhiệm vụ"
-                    android:src="@drawable/nut_sua" />
-
-                <ImageButton
-                    android:id="@+id/btn_delete_task4"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:contentDescription="Xóa nhiệm vụ"
-                    android:src="@drawable/delete" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
     </LinearLayout>
 
-</ScrollView>
+    <!-- Nút thêm nhiệm vụ -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add_task"
         android:layout_width="wrap_content"
@@ -335,15 +71,15 @@
         android:src="@drawable/themnhiemvu"
         app:backgroundTint="#FF9800"
         app:tint="@android:color/white"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
         android:contentDescription="Thêm nhiệm vụ mới"/>
-    <!-- Nhớ thêm icon ic_add vào drawable -->
+
+    <!-- Menu bottom -->
     <include
         android:id="@+id/thanh_menu"
         layout="@layout/thanh_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom" />
-
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

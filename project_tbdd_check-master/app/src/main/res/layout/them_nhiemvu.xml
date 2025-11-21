@@ -5,14 +5,14 @@
     android:orientation="vertical"
     android:padding="24dp"
     android:background="@drawable/mauvangnhat_dangki">
-    <!-- Dùng nền bo góc nhẹ hoặc màu nền chung -->
-
+    
+    <!-- Tiêu đề cho phần Thêm mới -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="24dp"
-        android:text="Cập nhật nhiệm vụ"
+        android:text="Thêm nhiệm vụ mới"
         android:textColor="#E67E22"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -26,15 +26,16 @@
         android:layout_marginBottom="8dp"/>
 
     <EditText
-        android:id="@+id/et_edit_title"
+        android:id="@+id/et_add_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_edittext_hong"
-        android:hint="Tên nhiệm vụ cần sửa..."
+        android:hint="Nhập tên nhiệm vụ..."
         android:padding="12dp"
         android:textColor="#333333"
         android:minHeight="50dp" />
 
+    <!-- Thêm ô nhập Ví dụ/Chi tiết theo yêu cầu -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,11 +46,11 @@
         android:layout_marginBottom="8dp"/>
 
     <EditText
-        android:id="@+id/et_edit_description"
+        android:id="@+id/et_add_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_edittext_hong"
-        android:hint="Sửa lại ví dụ hoặc mô tả..."
+        android:hint="Ví dụ (không bắt buộc)"
         android:padding="12dp"
         android:textColor="#333333"
         android:minHeight="50dp" />
@@ -57,11 +58,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_edit_cancel"
+            android:id="@+id/btn_add_cancel"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginEnd="8dp"
@@ -71,13 +72,13 @@
             android:textColor="#888888" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_edit_save"
+            android:id="@+id/btn_add_save"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginStart="8dp"
             android:layout_weight="1"
             android:background="@drawable/buton_orange"
-            android:text="Cập nhật"
+            android:text="Thêm mới"
             android:textColor="@android:color/white" />
     </LinearLayout>
 

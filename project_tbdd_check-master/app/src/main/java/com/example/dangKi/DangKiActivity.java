@@ -11,20 +11,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tuVung.MainActivity;
 import com.example.tuVung.R;
+import com.example.gheptu.Database.SQLiteConnect; // Dùng database chung
 
 public class DangKiActivity extends AppCompatActivity {
 
     private EditText emailEditText;
     private EditText passwordEditText;
     private Button registerButton;
-    private DatabaseHelper databaseHelper;
+    private SQLiteConnect databaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.trang_dangki);
 
-        databaseHelper = new DatabaseHelper(this);
+        databaseHelper = new SQLiteConnect(this);
 
         // Ánh xạ các view từ layout
         emailEditText = findViewById(R.id.email);
