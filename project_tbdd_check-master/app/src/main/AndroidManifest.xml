@@ -13,17 +13,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppVocabularyEnglish">
-        
+        <activity
+            android:name="com.example.chuDe.Nhap"
+            android:exported="false" />
         <!-- Activity Đăng ký (Chạy đầu tiên) -->
         <activity
             android:name="com.example.dangKi.DangKiActivity"
             android:exported="true">
-             <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name="com.example.gheptu.activities.ThemMoiTuActivity"
             android:exported="false" />
@@ -43,13 +45,16 @@
         <activity android:name="com.example.chuDe.FlashCardActivity" />
         <activity android:name="com.example.NhiemVu.NhiemVuActivity" /> <!-- Activity màn chính -->
         <activity
-            android:name="com.example.tuVung.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
-            <!-- <intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter> -->
+            </intent-filter>
+            -->
         </activity>
     </application>
 
